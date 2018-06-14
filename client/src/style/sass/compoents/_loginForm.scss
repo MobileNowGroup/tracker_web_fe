@@ -1,0 +1,24 @@
+.login-form-panel {
+  border: 0.05rem solid #e9e9ea;
+  background-color: white;
+  border-radius: 0.4rem;
+  height: 21rem;
+  // padding: 1rem;
+
+  .panel-input {
+    // border: 0.09rem none solid #dddddd;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-width: 0.09rem;
+    border-color: #dddddd;
+    border-left-style: none;
+    border-right-style: none;
+    margin: 0rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding-top: 1rem;
+    padding-right: 0.5rem;
+  }
+  // .panel-body {
+  // }
+}
