@@ -1,0 +1,92 @@
+.projectItem {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  height: 3rem;
+  background-color: white;
+  justify-content: space-between;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-bottom: 1px solid #f0f0f0;
+  align-items: center;
+  // visibility: hidden;
+
+  &__leftContent {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-content: center;
+  }
+
+  &__rightContent {
+    display: flex;
+    float: 1;
+    width: 60%;
+    height: 2rem;
+    font-size: 14px;
+    align-content: center;
+    justify-content: flex-end;
+    visibility: hidden;
+    // display: none;
+  }
+
+  &__title {
+    font-size: 0.9rem;
+    color: black;
+  }
+
+  &__accountInfo {
+    font-size: 10px;
+    color: #666;
+  }
+
+  &:active,
+  &:hover &__rightContent {
+    visibility: visible;
+  }
+
+  // &:active,
+  // &:focus {
+  //   transform: scaleX(1.05);
+  // }
+}
+
+.add-project-container {
+  background-color: white;
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  height: 3rem;
+  align-items: center;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  border-bottom: 1px solid #f0f0f0;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  justify-content: space-between;
+
+  // &__input {
+  //   width: 65%;
+  // }
+}
+
+.task-header {
+  display: flex;
+  flex: 1;
+  height: 7.5rem;
+  flex-direction: column;
+  align-content: flex-end;
+  border-bottom: 1px solid #f0f0f0;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  justify-content: space-around;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  &__title {
+    font-size: 1.3rem;
+  }
+
+  &__project-name {
+    font-size: 12px;
+  }
+}

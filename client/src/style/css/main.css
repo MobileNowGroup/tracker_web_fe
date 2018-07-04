@@ -4351,37 +4351,47 @@ input[type="button"].btn-block {
   border-top-right-radius: 0;
 }
 
-/* line 75, /Users/amy/MobileNow/Tracker/node_modules/bootstrap/scss/_nav.scss */
+/* line 67, /Users/amy/MobileNow/Tracker/node_modules/bootstrap/scss/_nav.scss */
+.nav-tabs .navbar .nav > li .dropdown-menu {
+  margin: 0;
+}
+
+/* line 70, /Users/amy/MobileNow/Tracker/node_modules/bootstrap/scss/_nav.scss */
+.nav-tabs .navbar .nav > li:hover .dropdown-menu {
+  display: block;
+}
+
+/* line 80, /Users/amy/MobileNow/Tracker/node_modules/bootstrap/scss/_nav.scss */
 .nav-pills .nav-link {
   border-radius: 0.25rem;
 }
 
-/* line 79, /Users/amy/MobileNow/Tracker/node_modules/bootstrap/scss/_nav.scss */
+/* line 84, /Users/amy/MobileNow/Tracker/node_modules/bootstrap/scss/_nav.scss */
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
   color: #fff;
   background-color: #007bff;
 }
 
-/* line 92, /Users/amy/MobileNow/Tracker/node_modules/bootstrap/scss/_nav.scss */
+/* line 96, /Users/amy/MobileNow/Tracker/node_modules/bootstrap/scss/_nav.scss */
 .nav-fill .nav-item {
   flex: 1 1 auto;
   text-align: center;
 }
 
-/* line 99, /Users/amy/MobileNow/Tracker/node_modules/bootstrap/scss/_nav.scss */
+/* line 103, /Users/amy/MobileNow/Tracker/node_modules/bootstrap/scss/_nav.scss */
 .nav-justified .nav-item {
   flex-basis: 0;
   flex-grow: 1;
   text-align: center;
 }
 
-/* line 112, /Users/amy/MobileNow/Tracker/node_modules/bootstrap/scss/_nav.scss */
+/* line 115, /Users/amy/MobileNow/Tracker/node_modules/bootstrap/scss/_nav.scss */
 .tab-content > .tab-pane {
   display: none;
 }
 
-/* line 115, /Users/amy/MobileNow/Tracker/node_modules/bootstrap/scss/_nav.scss */
+/* line 118, /Users/amy/MobileNow/Tracker/node_modules/bootstrap/scss/_nav.scss */
 .tab-content > .active {
   display: block;
 }
@@ -19835,37 +19845,47 @@ input[type="button"].btn-block {
   border-top-right-radius: 0;
 }
 
-/* line 75, /Users/amy/MobileNow/Tracker/node_modules/bootstrap/scss/_nav.scss */
+/* line 67, /Users/amy/MobileNow/Tracker/node_modules/bootstrap/scss/_nav.scss */
+.nav-tabs .navbar .nav > li .dropdown-menu {
+  margin: 0;
+}
+
+/* line 70, /Users/amy/MobileNow/Tracker/node_modules/bootstrap/scss/_nav.scss */
+.nav-tabs .navbar .nav > li:hover .dropdown-menu {
+  display: block;
+}
+
+/* line 80, /Users/amy/MobileNow/Tracker/node_modules/bootstrap/scss/_nav.scss */
 .nav-pills .nav-link {
   border-radius: 0.25rem;
 }
 
-/* line 79, /Users/amy/MobileNow/Tracker/node_modules/bootstrap/scss/_nav.scss */
+/* line 84, /Users/amy/MobileNow/Tracker/node_modules/bootstrap/scss/_nav.scss */
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
   color: #fff;
   background-color: #007bff;
 }
 
-/* line 92, /Users/amy/MobileNow/Tracker/node_modules/bootstrap/scss/_nav.scss */
+/* line 96, /Users/amy/MobileNow/Tracker/node_modules/bootstrap/scss/_nav.scss */
 .nav-fill .nav-item {
   flex: 1 1 auto;
   text-align: center;
 }
 
-/* line 99, /Users/amy/MobileNow/Tracker/node_modules/bootstrap/scss/_nav.scss */
+/* line 103, /Users/amy/MobileNow/Tracker/node_modules/bootstrap/scss/_nav.scss */
 .nav-justified .nav-item {
   flex-basis: 0;
   flex-grow: 1;
   text-align: center;
 }
 
-/* line 112, /Users/amy/MobileNow/Tracker/node_modules/bootstrap/scss/_nav.scss */
+/* line 115, /Users/amy/MobileNow/Tracker/node_modules/bootstrap/scss/_nav.scss */
 .tab-content > .tab-pane {
   display: none;
 }
 
-/* line 115, /Users/amy/MobileNow/Tracker/node_modules/bootstrap/scss/_nav.scss */
+/* line 118, /Users/amy/MobileNow/Tracker/node_modules/bootstrap/scss/_nav.scss */
 .tab-content > .active {
   display: block;
 }
@@ -25680,10 +25700,12 @@ a.text-dark:hover, a.text-dark:focus {
   position: absolute;
   width: 100%;
   height: 100%;
+  left: 0;
+  overflow: hidden;
   background-color: #f8f8f8;
 }
 
-/* line 7, /Users/amy/MobileNow/Tracker/client/src/style/sass/compoents/_signupPage.scss */
+/* line 9, /Users/amy/MobileNow/Tracker/client/src/style/sass/compoents/_signupPage.scss */
 .register-contanier .login-container {
   float: right;
   margin: 20px;
@@ -25709,11 +25731,14 @@ a.text-dark:hover, a.text-dark:focus {
   position: absolute;
   width: 100%;
   height: 100%;
+  bottom: 0;
   background-color: #f8f8f8;
   padding-top: 7.5rem;
+  left: 0;
+  overflow: hidden;
 }
 
-/* line 8, /Users/amy/MobileNow/Tracker/client/src/style/sass/compoents/_loginPage.scss */
+/* line 11, /Users/amy/MobileNow/Tracker/client/src/style/sass/compoents/_loginPage.scss */
 .login-container .form-panle {
   border: 0.05rem solid #e9e9ea;
   background-color: white;
@@ -25743,6 +25768,110 @@ a.text-dark:hover, a.text-dark:focus {
   margin-bottom: 1rem;
   padding-top: 1rem;
   padding-right: 0.5rem;
+}
+
+/* line 1, /Users/amy/MobileNow/Tracker/client/src/style/sass/container/_tracker.scss */
+.app-contanier {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  background-color: #f8f8f8;
+}
+
+/* line 1, /Users/amy/MobileNow/Tracker/client/src/style/sass/container/_projects.scss */
+.projectItem {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  height: 3rem;
+  background-color: white;
+  justify-content: space-between;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-bottom: 1px solid #f0f0f0;
+  align-items: center;
+}
+
+/* line 14, /Users/amy/MobileNow/Tracker/client/src/style/sass/container/_projects.scss */
+.projectItem__leftContent {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-content: center;
+}
+
+/* line 21, /Users/amy/MobileNow/Tracker/client/src/style/sass/container/_projects.scss */
+.projectItem__rightContent {
+  display: flex;
+  float: 1;
+  width: 60%;
+  height: 2rem;
+  font-size: 14px;
+  align-content: center;
+  justify-content: flex-end;
+  visibility: hidden;
+}
+
+/* line 33, /Users/amy/MobileNow/Tracker/client/src/style/sass/container/_projects.scss */
+.projectItem__title {
+  font-size: 0.9rem;
+  color: black;
+}
+
+/* line 38, /Users/amy/MobileNow/Tracker/client/src/style/sass/container/_projects.scss */
+.projectItem__accountInfo {
+  font-size: 10px;
+  color: #666;
+}
+
+/* line 43, /Users/amy/MobileNow/Tracker/client/src/style/sass/container/_projects.scss */
+.projectItem:active,
+.projectItem:hover .projectItem__rightContent {
+  visibility: visible;
+}
+
+/* line 54, /Users/amy/MobileNow/Tracker/client/src/style/sass/container/_projects.scss */
+.add-project-container {
+  background-color: white;
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  height: 3rem;
+  align-items: center;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  border-bottom: 1px solid #f0f0f0;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  justify-content: space-between;
+}
+
+/* line 73, /Users/amy/MobileNow/Tracker/client/src/style/sass/container/_projects.scss */
+.task-header {
+  display: flex;
+  flex: 1;
+  height: 7.5rem;
+  flex-direction: column;
+  align-content: flex-end;
+  border-bottom: 1px solid #f0f0f0;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  justify-content: space-around;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+/* line 85, /Users/amy/MobileNow/Tracker/client/src/style/sass/container/_projects.scss */
+.task-header__title {
+  font-size: 1.3rem;
+}
+
+/* line 89, /Users/amy/MobileNow/Tracker/client/src/style/sass/container/_projects.scss */
+.task-header__project-name {
+  font-size: 12px;
 }
 
 /*# sourceMappingURL=../css/main.map */

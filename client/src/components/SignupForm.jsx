@@ -2,9 +2,24 @@ import React, { Component } from "react";
 import "../style/css/main.css";
 
 class SignupForm extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      invalidCheck: true
+    };
+  }
+
+  changeCheck() {
+    let check = !this.state.invalidCheck;
+    this.setState({
+      invalidCheck: check
+    });
+  }
+
   render() {
     return (
-      <div className="form row">
+      <div className="form">
         <a href="https://www.timecamp.com/">
           <image
             style={{
@@ -17,8 +32,9 @@ class SignupForm extends Component {
             src={require("../images/timecamp-logo.png")}
           />
         </a>
+
         <form
-          className="form-horizontal col-md-10 offset-md-1"
+          className="form col-md-10 offset-md-1"
           id="signup_form"
           style={{ padding: "20px" }}
         >
@@ -39,6 +55,7 @@ class SignupForm extends Component {
               name="email"
               autoFocus="autofocus"
               maxLength="20"
+              required
             />
           </div>
           <div className="form-group">
@@ -48,16 +65,20 @@ class SignupForm extends Component {
               placeholder="Password"
               name="password"
               maxLength="10"
+              required
             />
           </div>
-          <div className="form-group form-check">
+          <div class="form-group form-check">
             <input
+              class="form-check-input"
               type="checkbox"
-              className="form-check-input"
-              id="PrivacyPolicyCheck"
-              checked="checked"
+              value=""
+              id="invalidCheck"
+              checked={this.state.invalidCheck ? "checked" : ""}
+              onClick={this.changeCheck.bind(this)}
+              required
             />
-            <label className="form-check-label" for="PrivacyPolicyCheck">
+            <label class="form-check-label" for="invalidCheck">
               I agree to Terms of Service and Privacy Policy.
             </label>
           </div>

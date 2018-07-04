@@ -1,11 +1,35 @@
 import React, { Component } from "react";
 import "../style/css/main.css";
+import { Redirect } from "react-router-dom";
 
 class LoginForm extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      flag: false
+    };
+    this.register = this.register.bind(this);
+  }
+
+  register() {
+    console.log("这里是注册这里是注册");
+    this.setState({
+      flag: true
+    });
+  }
+
+  handleLogin(event) {
+    let email = event.target[0].value;
+    let password = event.target[1].value;
+    this.props.callbackParent(email, password);
+  }
+
   render() {
-    return (
+    let flag = this.state.flag;
+    let redirectToRegister = <Redirect to="/auth/register" />;
+    let app = (
       <div className="login-form-panel">
-        <form className="form">
+        <form className="form" onSubmit={this.handleLogin.bind(this)}>
           <h5
             className="font-weight-bold"
             style={{ paddingTop: "1rem", paddingLeft: "1rem" }}
@@ -16,7 +40,7 @@ class LoginForm extends Component {
             <div className="form-group row">
               <label
                 for="email"
-                className="col-sm-2 col-md-4 col-lg-3 col-form-label"
+                className="col-sm-3 col-md-4 col-lg-3 col-form-label"
                 style={{
                   textAlign: "right",
                   paddingLeft: "0",
@@ -27,12 +51,13 @@ class LoginForm extends Component {
               >
                 E-mail:
               </label>
-              <div className="col-sm-10 col-md-8 col-lg-9">
+              <div className="col-sm-9 col-md-8 col-lg-9">
                 <input
                   id="email"
                   className="form-control"
                   maxLength="20"
                   type="email"
+                  required
                 />
               </div>
             </div>
@@ -46,16 +71,17 @@ class LoginForm extends Component {
                   fontWeight: "bold",
                   fontSize: "0.9rem"
                 }}
-                className="col-sm-2 col-md-4 col-lg-3 col-form-label"
+                className="col-sm-3 col-md-5 col-lg-3 col-form-label"
               >
                 Password:
               </label>
-              <div className="col-sm-10 col-md-8 col-lg-9">
+              <div className="col-sm-9 col-md-7 col-lg-9">
                 <input
                   id="password"
                   className="form-control"
                   maxLength="20"
                   type="password"
+                  required
                 />
               </div>
             </div>
@@ -75,18 +101,23 @@ class LoginForm extends Component {
         <div className="row" style={{ padding: "1rem" }}>
           <div className="col-md-6">
             <div>
-              <a style={{ fontSize: "small" }} href="#h">
+              <button
+                type="button"
+                className="btn btn-link btn-sm"
+                style={{ paddingLeft: "0", fontSize: "small" }}
+              >
                 Forgotten Password?
-              </a>
+              </button>
             </div>
             <div>
-              <a
-                style={{ fontSize: "small" }}
-                className="pull-left"
-                href="#http"
+              <button
+                type="button"
+                className="btn btn-link btn-sm"
+                onClick={this.register}
+                style={{ paddingLeft: "0" }}
               >
                 No account? Sign up
-              </a>
+              </button>
             </div>
           </div>
           <div className="col-md-6 d-flex align-items-center justify-content-around">
@@ -106,6 +137,7 @@ class LoginForm extends Component {
         </div>
       </div>
     );
+    return flag ? redirectToRegister : app;
   }
 }
 
